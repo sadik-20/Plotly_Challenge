@@ -98,7 +98,19 @@ function getPlot(id) {
             
         }
       ];
-    
+      // create a layout for the gauage
+      var layout_g = {
+          width: 700,
+          height: 600,
+          margin: {t: 20, b: 40, l:100, r:100 }
+      };
+      //plot the gauage
+      Plotly.newPlot("gauge",data_g, layout_g);
+      value:("")
+
+     });
+}
+ //   
 
 
 }
