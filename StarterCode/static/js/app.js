@@ -125,6 +125,9 @@ function getInfo(id) {
         //using d3 to select demographic panel to put data
         var demographicInfo = d3.select("#sample-metadata");
 
+        // empty the demographic info panel each time before getting new id info
+        demographicInfo.html("");
+
 
 }
 
