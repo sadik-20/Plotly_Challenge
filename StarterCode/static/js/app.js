@@ -35,6 +35,8 @@ function getPlot(id) {
         type: "bar",
         orientation: "h",
     };
+    
+    var data =[trace];
 }
 
 
