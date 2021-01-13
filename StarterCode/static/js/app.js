@@ -57,7 +57,18 @@ function getPlot(id) {
     console.log(`ID: ${samples.otu_ids}`)
 
     // The bubble chart
-    var trace1
+    var trace1 = {
+        x: samples.otu_ids,
+        y: samples.sample_values,
+        mode: "markers",
+        marker: {
+            size: samples.sample_values,
+            color: samples.otu_ids
+        },
+        text: samples.otu_labels
+    };
+
+    
 
 }
 
