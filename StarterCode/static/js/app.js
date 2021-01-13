@@ -74,6 +74,7 @@ function getPlot(id) {
         width: 1000
 
     };
+    var data1 = [trace1];
 
 }
 
