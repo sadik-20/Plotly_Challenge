@@ -12,7 +12,9 @@ function getPlot(id) {
         var samples = data.samples.filter(s => s.id.toString()=== id)[0];
         console.log(samples);
 
-        
+    // getting the top 10
+    var sampleValues = samples.sample_values.slice(0, 10)
+      
 }
 
 
