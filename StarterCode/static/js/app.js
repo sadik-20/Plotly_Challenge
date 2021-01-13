@@ -119,6 +119,8 @@ function getInfo(id) {
         var metadata = data.metadata;
 
         console.log(metadata)   
+        // filter metadata info by id
+        var result = metadata.filter(meta => meta.id.toString() === id)[0];
 
 
 }
