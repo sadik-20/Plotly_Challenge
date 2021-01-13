@@ -51,7 +51,13 @@ function getPlot(id) {
             b: 30
         }
     };
+    // create the bar plot
+    Plotly.newPlot("bar", data, layout);
 
+    console.log(`ID: ${samples.otu_ids}`)
+
+    // The bubble chart
+    var trace1
 
 }
 
