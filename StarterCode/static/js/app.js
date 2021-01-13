@@ -74,7 +74,11 @@ function getPlot(id) {
         width: 1000
 
     };
+    // create data array for the bubble chart
     var data1 = [trace1];
+    // create the bubble plot
+    Plotly.newPlot("bubble",data1, layout_b);
+
 
 }
 
