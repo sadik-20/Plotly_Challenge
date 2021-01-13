@@ -144,6 +144,11 @@ function init() {
     // select dropdown menu 
     var dropdown = d3.select("#selDataset");
 
+     // read the data 
+     d3.json("samples.json").then((data)=> {
+        console.log(data)
+
+
 
 
 
