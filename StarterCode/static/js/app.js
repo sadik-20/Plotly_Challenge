@@ -56,7 +56,7 @@ function getPlot(id) {
 
     console.log(`ID: ${samples.otu_ids}`)
 
-    // The bubble chart
+    // create the bubble chart
     var trace1 = {
         x: samples.otu_ids,
         y: samples.sample_values,
@@ -68,7 +68,12 @@ function getPlot(id) {
         text: samples.otu_labels
     };
 
-    
+    var layout_b = {
+        xaxis:{title: "OTU ID"},
+        height: 600,
+        width: 1000
+
+    };
 
 }
 
