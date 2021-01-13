@@ -19,7 +19,12 @@ function getPlot(id) {
     // getting the otu id variable to the desired form for the plot
     var OTU_id = OTU_top.map (d => "OTU " + d)
 
-      
+    console.log(`OTU IDS: ${OTU_id}`)
+    // get the top 10 labels for the plot
+    var labels = samples.otu_labels.slice(0, 10);
+
+        console.log(`Sample Values: ${samplevalues}`)
+        console.log(`Id Values:${OTU_top}`)
 }
 
 
