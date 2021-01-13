@@ -134,10 +134,16 @@ function getInfo(id) {
     });
 
 }
-// create the function for the change event
+// create a function for the change event
 function optionChanged(id) {
     getPlot(id);
     getInfo(id);
 }
+// create the function for the initial data rendering
+function init() {
+    // select dropdown menu 
+    var dropdown = d3.select("#selDataset");
+
+
 
 
