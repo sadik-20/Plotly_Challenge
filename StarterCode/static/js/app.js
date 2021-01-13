@@ -134,5 +134,10 @@ function getInfo(id) {
     });
 
 }
+// create the function for the change event
+function optionChanged(id) {
+    getPlot(id);
+    getInfo(id);
+}
 
 
