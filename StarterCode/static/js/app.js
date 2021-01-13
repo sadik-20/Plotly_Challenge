@@ -3,7 +3,7 @@ function getPlot(id) {
     // getting data from the json file
     d3.json("samples.json").then((data)=> {
         console.log(data)
-    });
+    
     // using a map function to get Washing Freq and set a variable to hold wfreq
         var wfreq = data.metadata.map(d => d.wfreq)
 
@@ -13,9 +13,9 @@ function getPlot(id) {
         console.log(samples);
 
     // getting the top 10
-    var sampleValues = samples.sample_values.slice(0, 10).reverse();
+    var samplevalues = samples.sample_values.slice(0, 10).reverse();
     //get only top 10 otu ids for the plot otu 
-    var OTU_top = (sample.otu_ids.slice(0, 10)).reverse();
+    var OTU_top = (samples.otu_ids.slice(0, 10)).reverse();
     // getting the otu id variable to the desired form for the plot
     var OTU_id = OTU_top.map (d => "OTU " + d)
 
@@ -107,12 +107,12 @@ function getPlot(id) {
       //plot the gauage
       Plotly.newPlot("gauge",data_g, layout_g);
       value:("")
-
-     });
+    });
+     
  }
-// create the function to get the necessary data
-function getInfo(id) {
-// read the json file to get data
+        // create the function to get the necessary data
+        function getInfo(id) {
+        // read the json file to get data
     d3.json("samples.json").then((data)=> {
         
         // get the metadata info for the demographic panel
@@ -151,6 +151,14 @@ function init() {
     data.names.forEach(function(name) {
         dropdown.append("option").text(name).property("value");
     });
+
+    // call the functions to display the data and the plots to the page
+    getPlot(data.names[0]);
+    getInfo(data.names[0]);
+});
+}
+
+init();
 
 
 
