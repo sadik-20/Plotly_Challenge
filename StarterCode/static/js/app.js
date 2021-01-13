@@ -127,7 +127,11 @@ function getInfo(id) {
 
         // empty the demographic info panel each time before getting new id info
         demographicInfo.html("");
-
+        // grab the necessary demographic data for the id and append the info to the panel
+        Object.entries(result).forEach((key) => {   
+            demographicInfo.append("h5").text(key[0].toUpperCase() + ": " + key[1] + "\n"); 
+        });
+    });
 
 }
 
