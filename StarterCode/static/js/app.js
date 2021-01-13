@@ -78,6 +78,27 @@ function getPlot(id) {
     var data1 = [trace1];
     // create the bubble plot
     Plotly.newPlot("bubble",data1, layout_b);
+    // create a trace for the guage
+    var data_g = [
+        {
+        domain: { x: [0, 1], y: [0, 1] },
+        value: parseFloat(wfreq),
+        title: { text: `Weekly Washing Frequency ` },
+        type: "indicator",
+        delta: { reference: null, increasing: { color: "purple"}},
+        mode: "gauge+number+pointer",
+        gauge: { axis: { range: [null, 9] },
+                 steps: [
+                  { range: [0, 2], color: "yellow" },
+                  { range: [2, 4], color: "skyblue" },
+                  { range: [4, 6], color: "lightyellow" },
+                  { range: [6, 8], color: "lime" },
+                  { range: [8, 9], color: "green" }
+                ]}
+            
+        }
+      ];
+    
 
 
 }
